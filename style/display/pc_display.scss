@@ -1,0 +1,18 @@
+
+.main {
+  font-size: 2.4rem;
+  &.self_introduction {
+  }
+  & ul {
+    & li {
+      margin-left: 20px;
+      font-size: 2.6rem;
+      & i{
+        font-size: 3.8rem;
+      }
+      & p {
+      
+      }
+    }
+  }
+}
