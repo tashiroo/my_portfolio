@@ -8,42 +8,54 @@
   <link rel="stylesheet" href="./style/style.css">
 </head>
 <header>
-
+  <div class="btn">
+    <button><a href="#home"> HOME </a></button>
+    <button><a href="#main">MAIN</a></button>
+    <button><a href="#form">FORM</a></button>
+  </div>
 </header>
 <body>
-  <section class="main">
+  <section class="home" id="home">
+    <h1>ご覧いただきありがとうございます</h1>
+    <button><a href="#main">ENTER</a></button>
+  </section>
+  <section class="main" id="main">
     <div class="self_introduction">
       <h1>田代 一博です</h1>
       <p>プログラミングを勉強しています</p>
       <p>趣味 特技 : 歩くこと <br>一日約30分 多い時で約2時間歩きます</p>
-      <p>使用言語です</p>
-        <ul class="skill">
+      <p>学習しているものです</p>
+      <div class="skill">
+        <ul class="skills">
           <li>
             <i class="fab fa-html5"></i>
-              <p>THML5</p>
+            <p>THML5</p>
           </li>
           <li>
             <i class="fab fa-css3"></i>
-              <p>CSS5</p>
+            <p>CSS5</p>
           </li>
           <li>
             <i class="fab fa-sass"></i>
-              <p>SCSS</p>
+            <p>SCSS</p>
           </li>
+        </ul>
+        <ul class="skills">
           <li>
             <i class="fab fa-js"></i>
-              <p>Javascript</p>
+            <p>Javascript</p>
           </li>
           <li>
             <i class="fab fa-gitkraken"></i>
-              <p>git kraken</p>
+            <p>git kraken</p>
           </li>
           <li>
             <i class="fab fa-github"></i>
-              <p>git hub</p>
+            <p>git hub</p>
           </li>
         </ul>
-    </div>
+      </div>
+      </div>
   </section>
 </body>
 <script src="./js/main.js"></script>

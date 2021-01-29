@@ -1,0 +1,41 @@
+header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+}
+.btn {
+  height:200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  & button:hover {
+    cursor: pointer;
+  }
+}
+button{
+  position: absolute;
+}
+.hide{
+  display: none;
+}
+
+.main {
+  font-size: 2.4rem;
+
+  & ul {
+    width: 600px;
+    margin: 0 auto;
+
+    & li {
+      margin-left: 20px;
+      width: 200px;
+      & i {
+        font-size: 2.9rem;
+      }
+      & p {
+        font-size: 2.4rem;
+      }
+    }
+  }
+}

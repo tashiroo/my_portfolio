@@ -1,0 +1,63 @@
+body {
+  width: 100%;
+  height: 100%;
+  color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 62.5%;
+  text-align: center;
+  background-image: url(/portfolio_test_site/images/20140323-P3230659_TP_V.jpg);
+  background-color: black;
+}
+
+header {
+  position: absolute;
+  z-index: 0;
+}
+
+.main {
+  font-size: 1.4rem;
+}
+
+.main .skill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .skill ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.main .skill ul li {
+  font-size: 0.7rem;
+  list-style: none;
+  width: 60px;
+}
+
+.main .skill ul li i {
+  font-size: 1.9rem;
+  margin: 0;
+  color: aquamarine;
+}
+
+.main .skill ul li p {
+  margin-top: 0;
+}
+/*# sourceMappingURL=phone_display.css.map */

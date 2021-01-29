@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AACA,AAAA,KAAK,CAAC;EACJ,SAAS,EAAE,MAAM;CAelB;;AAhBD,AAKI,KALC,CAID,EAAE,CACA,EAAE,CAAC;EACH,WAAW,EAAE,IAAI;EACjB,SAAS,EAAE,MAAM;CAOlB;;AAdL,AAQM,KARD,CAID,EAAE,CACA,EAAE,CAGA,CAAC,CAAA;EACD,SAAS,EAAE,MAAM;CAClB",
-    "sources": [
-        "pc_display.scss"
-    ],
-    "names": [],
-    "file": "pc_display.css"
-}
