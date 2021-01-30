@@ -1,13 +1,96 @@
 body{
   width: 100%;
+  
 }
 
 header{
+  padding-top:100px ;
   position: fixed;
 }
-.btn{
-  display: none;
-  position: absolute;
-  float: left;
+.topBtn{
+  z-index: 100;
+  &.animationBtn{
+    transform-style: preserve-3d;
+    perspective: 100px;
+    animation: topBtn 3s ease forwards;
+    transform-origin: top left;
+  }
+  &.animationBtn2{
+    transform-style: preserve-3d;
+    perspective: 100px;
+    animation: topBtn2 3s ease forwards;
+    transform-origin: top left;
+  }
 }
 
+.btnHeight1 {
+  height: 100px;
+}
+.btnHeight2 {
+  height: 200px;
+}
+.btnHeight3 {
+  height: 300px;
+}
+
+// .downMove {
+  
+// }
+.down{
+  animation: downMove 3s ease forwards;
+  }
+.animationFont{
+  animation: animationFont 0.03s ease forwards;
+  // transform: rotateX(-180deg);
+}
+
+.btn{
+  position: absolute;
+  float: left;
+  width: 100px;
+}
+
+.box {
+  animation: downMove 3s ease forwards;
+  width: 100px;
+  height: 100px;
+  background-color: black;
+
+}
+
+@keyframes topBtn {
+  0%{
+    transform: rotateX(0);
+  }
+  100%{
+    transform: rotateX(-180deg);
+  }
+}
+@keyframes topBtnre {
+  0%{
+    transform: rotateX(0);
+  }
+  100%{
+    transform: rotateX(180deg);
+  }
+}
+@keyframes animationFont {
+  0%{
+    transform: rotateX(0);
+  }
+  
+  
+  100%{
+    transform: rotateX(-180deg);
+  }
+
+}
+
+@keyframes downMove {
+  0%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(100%);
+  }
+}
