@@ -12,9 +12,8 @@ body {
   background-color: black;
 }
 
-header {
-  position: absolute;
-  z-index: 0;
+.home {
+  display: none;
 }
 
 .main {

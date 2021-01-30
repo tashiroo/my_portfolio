@@ -9,4 +9,5 @@ topBtn.addEventListener("click" ,e =>{
   downMove1.classList.toggle("down");
   downMove2.classList.toggle("down");
   downMove3.classList.toggle("down");
+  
 });

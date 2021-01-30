@@ -1,31 +1,172 @@
-header {
-  position: fixed;
-  z-index: 100;
+body {
   width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
-.btn {
-  height: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+header {
+  position: absolute;
+  top: 100px;
+  right: 120px;
 }
 
-.btn button:hover {
-  cursor: pointer;
+header #header_trigger {
+  position: fixed;
 }
 
 button {
+  outline: none;
+}
+
+.topBtn {
+  z-index: 100;
+  background-color: salmon;
+  border-radius: 8px;
+  color: darkslategray;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.topBtn.animationBtn {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 100px;
+          perspective: 100px;
+  -webkit-animation: topBtn 3s ease forwards;
+          animation: topBtn 3s ease forwards;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.btnHeight1 {
+  height: 100px;
+}
+
+.btnHeight2 {
+  height: 200px;
+}
+
+.btnHeight3 {
+  height: 300px;
+}
+
+.btnAcs {
+  width: 100px;
+  height: 30px;
+  background-color: aquamarine;
+  border-radius: 20px;
+}
+
+.btnAcs a {
+  color: darkgreen;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.down {
+  -webkit-animation: downMove 3s ease forwards;
+          animation: downMove 3s ease forwards;
+}
+
+.animationFont {
+  -webkit-animation: animationFont 0.03s ease forwards;
+          animation: animationFont 0.03s ease forwards;
+}
+
+.btn {
   position: absolute;
+  float: left;
+  width: 100px;
+}
+
+@-webkit-keyframes topBtn {
+  0% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  100% {
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
+}
+
+@keyframes topBtn {
+  0% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  100% {
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
+}
+
+@-webkit-keyframes topBtnre {
+  0% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  100% {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+  }
+}
+
+@keyframes topBtnre {
+  0% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  100% {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+  }
+}
+
+@-webkit-keyframes animationFont {
+  0% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  100% {
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
+}
+
+@keyframes animationFont {
+  0% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  100% {
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
+}
+
+@-webkit-keyframes downMove {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+}
+
+@keyframes downMove {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
 }
 
 .hide {

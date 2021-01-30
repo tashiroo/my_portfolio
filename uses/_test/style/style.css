@@ -1,14 +1,32 @@
 body {
   width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 header {
-  padding-top: 100px;
+  position: absolute;
+  top: 100px;
+  right: 120px;
+}
+
+header #header_trigger {
   position: fixed;
+}
+
+button {
+  outline: none;
 }
 
 .topBtn {
   z-index: 100;
+  background-color: salmon;
+  border-radius: 8px;
+  color: darkslategray;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .topBtn.animationBtn {
@@ -18,17 +36,6 @@ header {
           perspective: 100px;
   -webkit-animation: topBtn 3s ease forwards;
           animation: topBtn 3s ease forwards;
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
-}
-
-.topBtn.animationBtn2 {
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-perspective: 100px;
-          perspective: 100px;
-  -webkit-animation: topBtn2 3s ease forwards;
-          animation: topBtn2 3s ease forwards;
   -webkit-transform-origin: top left;
           transform-origin: top left;
 }
@@ -43,6 +50,19 @@ header {
 
 .btnHeight3 {
   height: 300px;
+}
+
+.btnAcs {
+  width: 100px;
+  height: 30px;
+  background-color: aquamarine;
+  border-radius: 20px;
+}
+
+.btnAcs a {
+  color: darkgreen;
+  text-decoration: none;
+  font-size: 20px;
 }
 
 .down {
