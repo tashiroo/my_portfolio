@@ -175,9 +175,16 @@ body {
       -webkit-transform: rotateX(0);
               transform: rotateX(0);
     }
+    1% {
+      opacity: 0;
+    }
+    99% {
+      opacity: 0;
+    }
     100% {
-      -webkit-transform: rotateX(-180deg);
-              transform: rotateX(-180deg);
+      opacity: 1;
+      -webkit-transform: rotateX(180deg);
+              transform: rotateX(180deg);
     }
   }
   @keyframes animationFont {
@@ -185,9 +192,16 @@ body {
       -webkit-transform: rotateX(0);
               transform: rotateX(0);
     }
+    1% {
+      opacity: 0;
+    }
+    99% {
+      opacity: 0;
+    }
     100% {
-      -webkit-transform: rotateX(-180deg);
-              transform: rotateX(-180deg);
+      opacity: 1;
+      -webkit-transform: rotateX(180deg);
+              transform: rotateX(180deg);
     }
   }
   @-webkit-keyframes downMove {

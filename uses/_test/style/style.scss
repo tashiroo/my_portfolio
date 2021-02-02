@@ -1,5 +1,13 @@
-body {
+html{
   width: 100%;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  margin: 0;
   user-select: none;
 }
 
@@ -55,7 +63,7 @@ button {
   animation: downMove 3s ease forwards;
 }
 .animationFont {
-  animation: animationFont 0.03s ease forwards;
+  animation: animationFont 2s ease forwards;
   // transform: rotateX(-180deg);
 }
 
@@ -66,10 +74,21 @@ button {
 }
 
 .box {
-  animation: downMove 3s ease forwards;
   width: 100px;
   height: 100px;
   background-color: black;
+  &.click{
+    animation: downMove 3s ease forwards;
+  }
+}
+
+@keyframes downMove {
+  0% {
+    transform: rotateX(0);
+  }
+  100% {
+    transform: rotateX(-180deg);
+  }
 }
 
 @keyframes topBtn {
@@ -92,8 +111,15 @@ button {
   0% {
     transform: rotateX(0);
   }
+  1% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
   100% {
-    transform: rotateX(-180deg);
+    opacity: 1;
+    transform: rotateX(180deg);
   }
 }
 
@@ -105,4 +131,82 @@ button {
   100% {
     transform: translateY(100%);
   }
+}
+
+#home {
+  margin: 0%;
+  height: 100%;
+  background-color: beige;
+  & > .topfont{
+   padding-top: 20%;
+  }
+}
+
+#main {
+  width: 100%;
+  background-color: brown;
+}
+
+.font_animation {
+  margin: 0 auto;
+  overflow: hidden;
+  cursor: pointer;
+  width: 300px;
+  display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    
+    &:hover .ok {
+      animation: ok 6s ease infinite; 
+      &.ok1{
+        animation-delay: 0.1s;
+      }
+      &.ok2{
+        animation-delay: 0.2s;
+      }
+      &.ok3{
+        animation-delay: 0.3s;
+      }
+      &.ok4{
+        animation-delay: 0.4s;
+      }
+      &.ok5{
+        animation-delay: 0.5s;
+      }
+    }
+  }
+    a {
+      text-decoration: none;
+      font-size: 28px;
+      color: white;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+@keyframes ok {
+    0% {
+      transform: translatex(0);
+    }
+    33% {
+      transform: translatex(400px);
+    }
+    
+    36% {
+      opacity: 0;
+    }
+
+    64% {
+      opacity: 0;
+      transform: translatex(-400px);
+    }    
+    66% {
+      opacity: 1;
+      transform: translatex(-400px);
+    }
+    100% {
+      transform: translatex(0px);
+    }
+}
+#form {
+  width: 100%;
+  background-color: cadetblue;
 }
