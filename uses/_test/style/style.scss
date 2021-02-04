@@ -127,7 +127,7 @@ button {
   0% {
     transform: translateY(0);
   }
-
+  
   100% {
     transform: translateY(100%);
   }
@@ -138,75 +138,72 @@ button {
   height: 100%;
   background-color: beige;
   & > .topfont{
-   padding-top: 20%;
+    padding-top: 20%;
   }
 }
 
 #main {
   width: 100%;
+  height: 100%;
   background-color: brown;
+}
+
+.homebtn {
+
 }
 
 .font_animation {
   margin: 0 auto;
   overflow: hidden;
-  cursor: pointer;
-  width: 300px;
   display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    
-    &:hover .ok {
-      animation: ok 6s ease infinite; 
-      &.ok1{
-        animation-delay: 0.1s;
+  flex-direction: row-reverse;
+  justify-content: center;
+  &:hover .ok {
+    cursor: pointer;
+    animation: ok 5s ease-in-out infinite; 
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        animation-delay: $i * 0.2s;
       }
-      &.ok2{
-        animation-delay: 0.2s;
-      }
-      &.ok3{
-        animation-delay: 0.3s;
-      }
-      &.ok4{
-        animation-delay: 0.4s;
-      }
-      &.ok5{
-        animation-delay: 0.5s;
-      }
-    }
+    } 
   }
-    a {
-      text-decoration: none;
-      font-size: 28px;
-      color: white;
-      font-family:Arial, Helvetica, sans-serif;
-    }
+}
+a {
+  text-decoration: none;
+  font-size: 28px;
+  color: white;
+  font-family:Arial, Helvetica, sans-serif;
+}
 
 @keyframes ok {
-    0% {
-      transform: translatex(0);
-    }
-    33% {
-      transform: translatex(400px);
-    }
-    
-    36% {
-      opacity: 0;
-    }
-
-    64% {
-      opacity: 0;
-      transform: translatex(-400px);
-    }    
-    66% {
-      opacity: 1;
-      transform: translatex(-400px);
-    }
-    100% {
-      transform: translatex(0px);
-    }
+  0% {
+    transform: translatex(0);
+  }
+  33% {
+    transform: translatex(400px);
+  }
+  
+  36% {
+    opacity: 0;
+  }
+  
+  64% {
+    opacity: 0;
+    transform: translatex(-400px);
+  }    
+  66% {
+    opacity: 1;
+    transform: translatex(-400px);
+  }
+  100% {
+    transform: translatex(0px);
+  }
 }
 #form {
   width: 100%;
+  height: 100%;
   background-color: cadetblue;
 }
+ .front {
+   display: block;
+ }

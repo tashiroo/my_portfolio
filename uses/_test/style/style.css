@@ -225,14 +225,13 @@ button {
 
 #main {
   width: 100%;
+  height: 100%;
   background-color: brown;
 }
 
 .font_animation {
   margin: 0 auto;
   overflow: hidden;
-  cursor: pointer;
-  width: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -246,33 +245,34 @@ button {
 }
 
 .font_animation:hover .ok {
-  -webkit-animation: ok 6s ease infinite;
-          animation: ok 6s ease infinite;
+  cursor: pointer;
+  -webkit-animation: ok 5s ease-in-out infinite;
+          animation: ok 5s ease-in-out infinite;
 }
 
-.font_animation:hover .ok.ok1 {
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
-}
-
-.font_animation:hover .ok.ok2 {
+.font_animation:hover .ok:nth-child(1) {
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
 
-.font_animation:hover .ok.ok3 {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
-}
-
-.font_animation:hover .ok.ok4 {
+.font_animation:hover .ok:nth-child(2) {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
 
-.font_animation:hover .ok.ok5 {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+.font_animation:hover .ok:nth-child(3) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.font_animation:hover .ok:nth-child(4) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.font_animation:hover .ok:nth-child(5) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 a {
@@ -340,6 +340,11 @@ a {
 
 #form {
   width: 100%;
+  height: 100%;
   background-color: cadetblue;
+}
+
+.front {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */
