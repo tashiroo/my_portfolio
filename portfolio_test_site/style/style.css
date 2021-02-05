@@ -12,11 +12,12 @@ body {
   background-color: black;
 }
 
-.home {
+.ph {
   display: none;
 }
 
 .main {
+  display: block;
   font-size: 1.4rem;
 }
 
@@ -61,8 +62,15 @@ body {
 }
 
 @media (min-width: 415px) {
-  body {
+  html {
     width: 100%;
+    height: 100%;
+  }
+  body {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    margin: 0;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
@@ -229,20 +237,140 @@ body {
   }
   .main {
     font-size: 2.4rem;
+    width: 100%;
+    height: 100%;
   }
-  .main ul {
+  .main .skill ul {
     width: 600px;
     margin: 0 auto;
   }
-  .main ul li {
+  .main .skill ul li {
     margin-left: 20px;
-    width: 200px;
+    width: 100%;
   }
-  .main ul li i {
+  .main .skill ul li i {
     font-size: 2.9rem;
   }
-  .main ul li p {
-    font-size: 2.4rem;
+  .main .skill ul li p {
+    font-size: 2rem;
+  }
+  #home {
+    margin: 0%;
+    height: 100%;
+    background-color: beige;
+  }
+  #home > .topfont {
+    padding-top: 20%;
+  }
+  .font_animation {
+    margin: 0 auto;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .font_animation:hover .ok {
+    cursor: pointer;
+    -webkit-animation: ok 5s ease-in-out infinite;
+            animation: ok 5s ease-in-out infinite;
+  }
+  .font_animation:hover .ok:nth-child(1) {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+  }
+  .font_animation:hover .ok:nth-child(2) {
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+  }
+  .font_animation:hover .ok:nth-child(3) {
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+  }
+  .font_animation:hover .ok:nth-child(4) {
+    -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+  }
+  .font_animation:hover .ok:nth-child(5) {
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
+  a {
+    text-decoration: none;
+    font-size: 28px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  @-webkit-keyframes ok {
+    0% {
+      -webkit-transform: translatex(0);
+              transform: translatex(0);
+    }
+    33% {
+      -webkit-transform: translatex(400px);
+              transform: translatex(400px);
+    }
+    36% {
+      opacity: 0;
+    }
+    64% {
+      opacity: 0;
+      -webkit-transform: translatex(-400px);
+              transform: translatex(-400px);
+    }
+    66% {
+      opacity: 1;
+      -webkit-transform: translatex(-400px);
+              transform: translatex(-400px);
+    }
+    100% {
+      -webkit-transform: translatex(0px);
+              transform: translatex(0px);
+    }
+  }
+  @keyframes ok {
+    0% {
+      -webkit-transform: translatex(0);
+              transform: translatex(0);
+    }
+    33% {
+      -webkit-transform: translatex(400px);
+              transform: translatex(400px);
+    }
+    36% {
+      opacity: 0;
+    }
+    64% {
+      opacity: 0;
+      -webkit-transform: translatex(-400px);
+              transform: translatex(-400px);
+    }
+    66% {
+      opacity: 1;
+      -webkit-transform: translatex(-400px);
+              transform: translatex(-400px);
+    }
+    100% {
+      -webkit-transform: translatex(0px);
+              transform: translatex(0px);
+    }
+  }
+  #form {
+    width: 100%;
+    height: 100%;
+    background-color: cadetblue;
+  }
+  .hide {
+    display: none;
+  }
+  .ph {
+    display: block;
   }
 }
 /*# sourceMappingURL=style.css.map */

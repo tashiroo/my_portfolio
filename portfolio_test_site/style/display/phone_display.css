@@ -12,11 +12,12 @@ body {
   background-color: black;
 }
 
-.home {
+.ph {
   display: none;
 }
 
 .main {
+  display: block;
   font-size: 1.4rem;
 }
 
