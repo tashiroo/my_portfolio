@@ -365,6 +365,63 @@ body {
     width: 100%;
     height: 100%;
     background-color: cadetblue;
+    padding-top: 200px;
+  }
+  #form .formStyle {
+    width: 50%;
+    height: 40%;
+    margin: 0 auto;
+    background-color: beige;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-radius: 50px;
+  }
+  #form .inputs {
+    width: 80%;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    margin-top: 14px;
+  }
+  #form .inputs:focus {
+    background-color: white;
+  }
+  #form textarea {
+    height: 120px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+  }
+  #form textarea:focus {
+    background-color: white;
+  }
+  #form .sendBtn {
+    margin-top: 14px;
+    border: none;
+    outline: none;
+    width: 80px;
+    border-radius: 3px;
+    background-color: dimgrey;
+    color: ivory;
+    top: 3px;
+    left: 3px;
+    -webkit-box-shadow: #313030 3px 3px;
+            box-shadow: #313030 3px 3px;
+  }
+  #form .sendBtn:active {
+    position: relative;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    top: 3px;
+    left: 3px;
   }
   .ph {
     display: block;
