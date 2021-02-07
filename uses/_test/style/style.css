@@ -344,6 +344,14 @@ a {
   background-color: cadetblue;
 }
 
+#form .inputs {
+  width: 500px;
+}
+
+#form textarea {
+  height: 50px;
+}
+
 .front {
   display: none;
 }

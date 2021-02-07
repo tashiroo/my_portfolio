@@ -20,6 +20,13 @@ function reset() {
  }
 
 
+ function goMainEv() {
+  header.classList.remove("hide");
+  main.classList.remove("hide");
+  home.classList.add("hide");
+  form.classList.add("hide");
+ }
+
 const header = document.getElementById("header");
 const home = document.getElementById("home");
 const main = document.getElementById("main");
@@ -29,24 +36,19 @@ const goMain = document.getElementById("goMain");
 const goMain2 = document.getElementById("goMain2");
 const goForm = document.getElementById("goForm");
 goMain.addEventListener("click" ,e =>{
-  main.classList.remove("hide");
-  header.classList.remove("hide");
-  home.classList.add("hide");
+  goMainEv();
 });
 goMain2.addEventListener("click" ,e =>{
-  header.classList.remove("hide");
-  main.classList.remove("hide");
-  home.classList.add("hide");
+  goMainEv();
 });
 goHome.addEventListener("click" ,e =>{
   main.classList.add("hide");
   home.classList.remove("hide");
   header.classList.add("hide");
+  form.classList.add("hide");
   reset();
 });
 goForm.addEventListener("click" ,e =>{
-  header.classList.add("hide");
   main.classList.add("hide");
   form.classList.remove("hide");
-  reset();
 });

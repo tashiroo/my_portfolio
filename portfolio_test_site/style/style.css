@@ -366,11 +366,11 @@ body {
     height: 100%;
     background-color: cadetblue;
   }
-  .hide {
-    display: none;
-  }
   .ph {
     display: block;
+  }
+  .hide {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
