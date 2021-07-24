@@ -1,0 +1,8 @@
+#privacy-panel {
+  background-color:cadetblue;
+  color: black;
+  position: absolute;
+  bottom: 0;
+}
+#privacy-panel #agreebtn{
+}

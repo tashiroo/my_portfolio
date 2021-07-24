@@ -1,0 +1,80 @@
+body {
+  width: 100%;
+  height: 100%;
+  color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 62.5%;
+  text-align: center;
+  background-image: url(/portfolio_test_site/images/20140323-P3230659_TP_V.jpg);
+  background-color: black;
+}
+
+.ph {
+  display: none;
+}
+
+.main {
+  display: block;
+  font-size: 1.4rem;
+}
+
+.main .skill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .skill ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.main .skill ul li {
+  font-size: 0.7rem;
+  list-style: none;
+  width: 60px;
+}
+
+.main .skill ul li i {
+  font-size: 1.9rem;
+  margin: 0;
+  color: aquamarine;
+}
+
+.main .skill ul li p {
+  margin-top: 0;
+}
+
+@media (min-width: 415px) {
+  html {
+    width: 100%;
+    height: 100%;
+  }
+  body {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

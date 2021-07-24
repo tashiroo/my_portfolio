@@ -1,0 +1,7 @@
+
+@import "display/phone_display";
+
+@media (min-width: 415px){
+  @import "display/pc_display";
+}
+
