@@ -38,6 +38,7 @@ function btnClick(){
           console.log(colmnIndexNumber);
           // テーブル内のデータの取得→ビンゴカードの当たった数字の書き換えに使う
           let numbersMath = document.querySelector("table").rows[Math.ceil(rowIndexNumber)].cells[colmnIndexNumber].firstChild.data;
+          // ↑テーブル内のこの数字を●に入れ替えたい
           console.log(numbersMath);
         }
       }
