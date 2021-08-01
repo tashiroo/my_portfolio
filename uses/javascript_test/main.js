@@ -11,7 +11,9 @@
 //    ctx.closePath();
 // }
 // drow();
-
-const h1 = document.createElement("h1");
-h1.textContent = "hallo";
-document.querySelector("body").appendChild(h1);
+let number = Math.floor(Math.random()*15);
+for(let i = 0;i < 5;i++){
+  number += 15*i;
+  console.log(number);  
+  number = Math.floor(Math.random()*15)
+}
