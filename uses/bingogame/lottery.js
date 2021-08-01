@@ -48,9 +48,6 @@ function btnClick(){
     }
     
     // ビンゴカードの作成
-    for(let i = 1;i <= 75;i++){
-      bingo2.push(i);   
-    }
     for(let a = 0;a <5;a++){
       const tr = document.createElement("tr");
       for(let bingonunmber = 0;bingonunmber < 5;bingonunmber++){
