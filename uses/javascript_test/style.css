@@ -1,0 +1,25 @@
+.bingoCard{
+  background-color: coral;
+}
+
+.bingoFont{
+  width:140px;
+}
+
+.bingoNumberBoard{
+  width:140px;
+  margin: 0;
+  writing-mode:vertical-lr;
+}
+
+td{
+  writing-mode:horizontal-tb;
+  background-color: aquamarine;
+}
+th{
+  width: 20%;
+  background-color: chartreuse;
+}
+tr{
+  text-align: center;
+}
