@@ -4,11 +4,11 @@ let bingo = [];
 let bingo2 = [];
 let bingo3 = [];
 let om =0;
-let counter = 100;
+let counter = 75;
 let score = 0;
 let rowIndexNumber = 0;
   let colmnIndexNumber =0;
-for(let i = 1;i <= 100;i++){
+for(let i = 1;i <= 75;i++){
   bingo.push(i);
 }
 let array = bingo;
@@ -35,9 +35,9 @@ function btnClick(){
           }
           console.log(Math.ceil(rowIndexNumber));
           console.log(colmnIndexNumber);
-          let numbersMath = document.querySelector("table").rows[Math.ceil(rowIndexNumber)].cells[colmnIndexNumber].firstChild.data;
+          let numbersMath = document.querySelector("tbody").rows[Math.ceil(rowIndexNumber)].cells[colmnIndexNumber].firstChild.data;
           // ↑テーブル内のデータの取得→ビンゴカードの当たった数字を●に入れ替えたい
-          document.querySelector("table").rows[Math.ceil(rowIndexNumber)].cells[colmnIndexNumber].textContent = "●";
+          document.querySelector("tbody").rows[Math.ceil(rowIndexNumber)].cells[colmnIndexNumber].textContent = "●";
           // 起きたバグ 抽選された番号にうまく切り替えができず●が抜けてしまう 
           // 原因１ 同じ数字が複数ビンゴカードに入ってしまっている
           // 原因２ 本来抽選されない0がビンゴカードの中に入ってしまっている
@@ -59,7 +59,6 @@ function btnClick(){
       for(let bingonunmber = 0;bingonunmber < 5;bingonunmber++){
         const td = document.createElement("td");  
         let number2 = Math.floor(Math.random() * bingo4.length);
-        console.log(bingo4[number2]);
         td.textContent = bingo4[number2];
         tr.appendChild(td);
         bingo3.push(number2);
@@ -68,3 +67,4 @@ function btnClick(){
         // console.log(bingo3);
         document.querySelector("tbody").appendChild(tr);
       }
+      // 8/03 昨日のコードを適応させたビンゴカードは完成したが今度は抽選した番号と別の箇所の数字が●に置き換わってしまうようになった
