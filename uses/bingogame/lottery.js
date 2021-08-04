@@ -28,20 +28,15 @@ function btnClick(){
         const indexNumbers = bingo3.indexOf(number);
         if(indexNumbers !== -1){
           // 抽選の数字と同じ数のテーブルの座標を出す
-          rowIndexNumber = (indexNumbers+1)/5;
+          // 新しいコードを入れたらずれておかしくなったが↓のコードに-1したら正常に起動するようになった
+          rowIndexNumber = (indexNumbers+1)/5-1;
           colmnIndexNumber = (indexNumbers+1)%5-1;
           if(colmnIndexNumber == -1){
             colmnIndexNumber = 4;
           }
-          console.log(Math.ceil(rowIndexNumber));
-          console.log(colmnIndexNumber);
           let numbersMath = document.querySelector("tbody").rows[Math.ceil(rowIndexNumber)].cells[colmnIndexNumber].firstChild.data;
           // ↑テーブル内のデータの取得→ビンゴカードの当たった数字を●に入れ替えたい
           document.querySelector("tbody").rows[Math.ceil(rowIndexNumber)].cells[colmnIndexNumber].textContent = "●";
-          // 起きたバグ 抽選された番号にうまく切り替えができず●が抜けてしまう 
-          // 原因１ 同じ数字が複数ビンゴカードに入ってしまっている
-          // 原因２ 本来抽選されない0がビンゴカードの中に入ってしまっている
-          // 後は演出を入れて見栄えをよくしたい バグを取ったら
           console.log(numbersMath);
         }
       }
@@ -51,7 +46,6 @@ function btnClick(){
     for(let a = 0;a < 5;a++){
       const tr = document.createElement("tr");
       bingo2.length = 0;
-      bingo3.length = 0;
       for(let b = 1;b<= 15;b++){
         bingo2.push(b);
       }
@@ -61,10 +55,10 @@ function btnClick(){
         let number2 = Math.floor(Math.random() * bingo4.length);
         td.textContent = bingo4[number2];
         tr.appendChild(td);
-        bingo3.push(number2);
+        bingo3.push(bingo4[number2]);
         bingo4.splice(number2 ,1);
       }
-        // console.log(bingo3);
-        document.querySelector("tbody").appendChild(tr);
-      }
-      // 8/03 昨日のコードを適応させたビンゴカードは完成したが今度は抽選した番号と別の箇所の数字が●に置き換わってしまうようになった
+      document.querySelector("tbody").appendChild(tr);
+    }
+    console.log(bingo3);
+      // 8/04 仕上げとしてscoreを実施し
