@@ -3,6 +3,7 @@
 let bingo = [];
 let bingo2 = [];
 let bingo3 = [];
+let lineUp = [];
 let om =0;
 let counter = 75;
 let score = 0;
@@ -41,12 +42,18 @@ function btnClick(){
           bingo3.splice(indexNumbers,1,"●");
         }
         for(let c =0;c<5;c++){
-          let LineUpR = bingo3.slice(0+5*c,5+5*c);
-          let LineUpC =[ bingo3[c],bingo3[c+5],bingo3[c+10],bingo3[c+15],bingo3[c+20]];
-          // console.log(LineUpR.join(""));
-          // console.log(LineUpC.join(""));
+          let lineUpR = bingo3.slice(0+5*c,5+5*c).join(",");
+          let lineUpC =[ bingo3[c],bingo3[c+5],bingo3[c+10],bingo3[c+15],bingo3[c+20]].join(",");
+          const lineUpCloss1 = [bingo3[0],bingo3[6],bingo3[12],bingo3[18],bingo3[24]].join(",");
+          const lineUpCloss2 = [bingo3[20],bingo3[16],bingo3[12],bingo3[8],bingo3[4]].join(",");
+          
+          if(lineUpC === "●,●,●,●,●" || lineUpR == "●,●,●,●,●"){
+            score += 1;
+          }else if(lineUpCloss1 === "●,●,●,●,●" || lineUpCloss2 == "●,●,●,●,●"){
 
+          }      
         }
+        // console.log(score);
       }
     }
     
