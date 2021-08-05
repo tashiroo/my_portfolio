@@ -38,27 +38,47 @@ function btnClick(){
           // ↑テーブル内のデータの取得→ビンゴカードの当たった数字を●に入れ替えたい
           document.querySelector("tbody").rows[Math.ceil(rowIndexNumber)].cells[colmnIndexNumber].textContent = "●";
           console.log(numbersMath);
+          bingo3.splice(indexNumbers,1,"●");
+        }
+        for(let c =0;c<5;c++){
+          let LineUpR = bingo3.slice(0+5*c,5+5*c);
+          let LineUpC =[ bingo3[c],bingo3[c+5],bingo3[c+10],bingo3[c+15],bingo3[c+20]];
+          // console.log(LineUpR.join(""));
+          // console.log(LineUpC.join(""));
+
         }
       }
     }
     
     // ビンゴカードの作成
-    for(let a = 0;a < 5;a++){
-      const tr = document.createElement("tr");
-      bingo2.length = 0;
-      for(let b = 1;b<= 15;b++){
-        bingo2.push(b);
+    class BingoCard{
+      constructor(){
+
+        for(let a = 0;a < 5;a++){
+          const tr = document.createElement("tr");
+          bingo2.length = 0;
+          for(let b = 1;b<= 15;b++){
+            bingo2.push(b);
+          }
+          const bingo4 = bingo2.map(number => number+15*a);
+          for(let bingonunmber = 0;bingonunmber < 5;bingonunmber++){
+            const td = document.createElement("td");  
+            let number2 = Math.floor(Math.random() * bingo4.length);
+            tr.appendChild(td);
+            bingo3.push(bingo4[number2]);
+            if(bingo3.length == 13){
+              td.textContent = "FREE";
+              bingo3.splice(12,1,"●");
+              td.classList.add("centerTd")
+            }else{
+              td.textContent = bingo4[number2];
+            }
+            bingo4.splice(number2 ,1);
+          } 
+          document.querySelector("tbody").appendChild(tr);
+        }
+        console.log(bingo3);
       }
-      const bingo4 = bingo2.map(number => number+15*a);
-      for(let bingonunmber = 0;bingonunmber < 5;bingonunmber++){
-        const td = document.createElement("td");  
-        let number2 = Math.floor(Math.random() * bingo4.length);
-        td.textContent = bingo4[number2];
-        tr.appendChild(td);
-        bingo3.push(bingo4[number2]);
-        bingo4.splice(number2 ,1);
-      }
-      document.querySelector("tbody").appendChild(tr);
     }
-    console.log(bingo3);
-      // 8/04 仕上げとしてscoreを実施し
+    const bingoCard = new BingoCard();
+      // 8/04 仕上げとしてscoreを実施
