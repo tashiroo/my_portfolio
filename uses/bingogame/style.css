@@ -46,7 +46,7 @@ tr{
   font-size: 12px;
 }
 
-.lotteryBtn{
+#lotteryBtn{
   text-align: center;
   
 }
@@ -68,4 +68,16 @@ tr{
     width: 74px;
     margin-top: 30px;
     border-radius: 6px;
+}
+
+ #lotteryBtn.hide{
+  display: none;
+}
+
+#clearBingo{
+  text-align: center;
+}
+
+#clearBingo.hide{
+  display: none;
 }
