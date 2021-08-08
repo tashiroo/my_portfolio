@@ -12,10 +12,3 @@
 // }
 // drow();
 
-let array = [["a"],["b"],["C","d"]];
-for(let i of array){
-  console.log(i);
-  if(i.length == 2){
-    console.log(2);
-  }
-}
