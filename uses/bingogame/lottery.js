@@ -38,10 +38,8 @@ function btnClick(){
       if(colmnIndexNumber == -1){
         colmnIndexNumber = 4;
       }
-      // let numbersMath = tbody.rows[Math.ceil(rowIndexNumber)].cells[colmnIndexNumber].firstChild.data;
-      // console.log(numbersMath);
-      // ↑テーブル内のデータの取得→ビンゴカードの当たった数字を●に入れ替えたい
       tbody.rows[Math.ceil(rowIndexNumber)].cells[colmnIndexNumber].textContent = "●";
+      // ↑テーブル内のデータの取得→ビンゴカードの当たった数字を●に入れ替えたい
       bingo3.splice(indexNumbers,1,"●");
     }
     for(let c =0;c<5;c++){
@@ -102,8 +100,8 @@ class BingoCard{
       }
       toggleChilds();
       // bingoCard = new BingoCard();
-        counter = 75;
-        score = 0;
+      counter = 75;
+      score = 0;
     }
     
     function toggleChilds(){
