@@ -7,10 +7,14 @@ let lineUp = [];
 let om =0;
 let counter = 75;
 let score = 0;
+let btncl = 0;
 let rowIndexNumber = 0;
 let colmnIndexNumber =0;
-const tbody = document.querySelector("tbody");
-for(let i = 1;i <= 75;i++){
+let bccl = "";
+const tbody = document.createElement("tbody");
+const bingoNumberBoard = document.getElementById("bingoNumberBoard");
+for(let i = 1;i <= 75;i++
+  ){
   bingo.push(i);
 }
 let array = bingo;
@@ -73,33 +77,36 @@ class BingoCard{
       }
       const bingo4 = bingo2.map(number => number+15*a);
       for(let bingonunmber = 0;bingonunmber < 5;bingonunmber++){
-            const td = document.createElement("td");  
-            let number2 = Math.floor(Math.random() * bingo4.length);
-            tr.appendChild(td);
-            bingo3.push(bingo4[number2]);
-            if(bingo3.length == 13){
-              td.textContent = "FREE";
-              bingo3.splice(12,1,"●");
-              td.classList.add("centerTd")
-            }else{
-              td.textContent = bingo4[number2];
-            }
-            bingo4.splice(number2 ,1);
-          } 
-          tbody.appendChild(tr);
+        const td = document.createElement("td");  
+        let number2 = Math.floor(Math.random() * bingo4.length);
+        tr.appendChild(td);
+        bingo3.push(bingo4[number2]);
+        if(bingo3.length == 13){
+          td.textContent = "FREE";
+          bingo3.splice(12,1,"●");
+          td.classList.add("centerTd")
+        }else{
+          td.textContent = bingo4[number2];
         }
-        console.log(bingo3);
-      }
+        bingo4.splice(number2 ,1);
+      } 
+      tr.classList.add(`click${btncl}`);
+      // ↑ビンゴを更新するときにtrが倍に増えてしまうためいつ作られたか確認する
+      tbody.appendChild(tr);
     }
-    const bingoCard = new BingoCard();
-    // 8/04 仕上げとしてscoreを実施
-    
-    function returnBtn(){
-      for(let trs = tbody.childNodes.length;trs > 0;trs--){
-        
-      }
+    bingoNumberBoard.appendChild(tbody);
+    console.log(bingo3);
+  }
+}
+const bingoCard = new BingoCard();
+// 8/04 仕上げとしてscoreを実施
+
+function returnBtn(){
+  // 再度ビンゴカードを作成すると以前のデータも作られてしまうのを改善する
+  bingoNumberBoard.removeChild(tbody);
+     btncl= btncl +1;
+      const newBingo = new BingoCard();
       toggleChilds();
-      // bingoCard = new BingoCard();
       counter = 75;
       score = 0;
     }
