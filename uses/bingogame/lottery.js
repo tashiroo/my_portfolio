@@ -29,7 +29,7 @@ function btnClick(){
       return value !== number;
     });
     array = array2;
-    bingo.splice(number -1,1,"●");
+    bingo.splice(number -1,1,"●");1
     console.log(bingo,number);
     nl.textContent = number; 
     counter--;
@@ -84,7 +84,7 @@ class BingoCard{
         if(bingo3.length == 13){
           td.textContent = "FREE";
           bingo3.splice(12,1,"●");
-          td.classList.add("centerTd")
+          td.classList.add("centerTd");
         }else{
           td.textContent = bingo4[number2];
         }
@@ -104,11 +104,18 @@ const bingoCard = new BingoCard();
 function returnBtn(){
   // 再度ビンゴカードを作成すると以前のデータも作られてしまうのを改善する
   bingoNumberBoard.removeChild(tbody);
+  const prevBingo = document.getElementsByClassName(`click${btncl}`);
+  for(let bncLenght = 1;bncLenght <= 5;bncLenght++){
+    tbody.removeChild(prevBingo);
+    console.log(btncl);
+  }
+  // 消えるけど個の子要素は親要素に存在しませんというエラーが出る
      btncl= btncl +1;
       const newBingo = new BingoCard();
       toggleChilds();
       counter = 75;
       score = 0;
+      
     }
     
     function toggleChilds(){
