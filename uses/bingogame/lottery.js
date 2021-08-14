@@ -11,7 +11,7 @@ let btncl = 0;
 let rowIndexNumber = 0;
 let colmnIndexNumber =0;
 let bccl = "";
-const tbody = document.createElement("tbody");
+let tbody = document.querySelector("tbody");
 const bingoNumberBoard = document.getElementById("bingoNumberBoard");
 for(let i = 1;i <= 75;i++
   ){
@@ -30,7 +30,8 @@ function btnClick(){
     });
     array = array2;
     bingo.splice(number -1,1,"●");1
-    console.log(bingo,number);
+    // console.log(bingo,number);
+    // ↑数字抽選確認用のコードこれは残しておく
     nl.textContent = number; 
     counter--;
     const indexNumbers = bingo3.indexOf(number);
@@ -66,9 +67,8 @@ function btnClick(){
 }
 
 // ビンゴカードの作成
-class BingoCard{
-  constructor(){
-    
+function bingoCard(){
+  
     for(let a = 0;a < 5;a++){
       const tr = document.createElement("tr");
       bingo2.length = 0;
@@ -95,30 +95,41 @@ class BingoCard{
       tbody.appendChild(tr);
     }
     bingoNumberBoard.appendChild(tbody);
-    console.log(bingo3);
+    // console.log(bingo3);
   }
-}
-const bingoCard = new BingoCard();
+
+    bingoCard();
 // 8/04 仕上げとしてscoreを実施
 
 function returnBtn(){
-  // 再度ビンゴカードを作成すると以前のデータも作られてしまうのを改善する
-  bingoNumberBoard.removeChild(tbody);
-  const prevBingo = document.getElementsByClassName(`click${btncl}`);
-  for(let bncLenght = 1;bncLenght <= 5;bncLenght++){
-    tbody.removeChild(prevBingo);
-    console.log(btncl);
-  }
   // 消えるけど個の子要素は親要素に存在しませんというエラーが出る
-     btncl= btncl +1;
-      const newBingo = new BingoCard();
-      toggleChilds();
-      counter = 75;
-      score = 0;
-      
-    }
-    
-    function toggleChilds(){
-      lotteryBtn.classList.toggle("hide");
-      clearBingo.classList.toggle("hide");
-    }
+  // 上記は解決
+  // 再度ビンゴカードを作成すると以前のデータも作られてしまうのを改善する
+  resetNumber();
+  btncl= btncl +1;
+  toggleChilds();
+  tbody = document.createElement("tbody");
+  bingoCard();
+  
+  const prevBingo = document.getElementsByClassName(`click${btncl}`);
+}
+
+function toggleChilds(){
+  lotteryBtn.classList.toggle("hide");
+  clearBingo.classList.toggle("hide");
+}
+
+function resetNumber(){
+  bingo = [];
+  bingo2 = [];
+  bingo3 = [];
+  lineUp = [];
+  om =0;
+  counter = 75
+  score =0;
+  rowIndexNumber = 0;
+  colmnIndexNumber =0;
+  bccl = "";
+  nl.textContent = "ok?"
+  bingoNumberBoard.removeChild(tbody);
+}
