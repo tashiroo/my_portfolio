@@ -108,9 +108,7 @@ function returnBtn(){
   resetNumber();
   btncl= btncl +1;
   toggleChilds();
-  tbody = document.createElement("tbody");
   bingoCard();
-  
   const prevBingo = document.getElementsByClassName(`click${btncl}`);
 }
 
@@ -132,4 +130,7 @@ function resetNumber(){
   bccl = "";
   nl.textContent = "ok?"
   bingoNumberBoard.removeChild(tbody);
+  tbody = document.createElement("tbody");
+  // htmlにtbodyを追加してremoveChildした後にtbodyを新しく代入したらうまくいった
+  // 8/15 デバッグを行い演出を考える
 }
