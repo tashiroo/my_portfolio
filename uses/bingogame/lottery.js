@@ -3,25 +3,16 @@
 let bingo = [];
 let bingo2 = [];
 let bingo3 = [];
-let lineUp = [];
-let om =0;
+let array = [];
 let counter = 75;
 let score = 0;
-let btncl = 0;
-let rowIndexNumber = 0;
-let colmnIndexNumber =0;
-let bccl = "";
 let tbody = document.querySelector("tbody");
 const bingoNumberBoard = document.getElementById("bingoNumberBoard");
-for(let i = 1;i <= 75;i++
-  ){
-  bingo.push(i);
-}
-let array = bingo;
 const nl = document.getElementById("nl");
 const btn = document.getElementById("btn");
 const lotteryBtn = document.getElementById("lotteryBtn");
 const clearBingo = document.getElementById("clearBingo");
+br();
 function btnClick(){
   if(counter > 0){
     const number = array[Math.floor(Math.random() * array.length)];
@@ -38,8 +29,8 @@ function btnClick(){
     if(indexNumbers !== -1){
       // 抽選の数字と同じ数のテーブルの座標を出す
       // 新しいコードを入れたらずれておかしくなったが↓のコードに-1したら正常に起動するようになった
-      rowIndexNumber = (indexNumbers+1)/5-1;
-      colmnIndexNumber = (indexNumbers+1)%5-1;
+      let rowIndexNumber = (indexNumbers+1)/5-1;
+      let colmnIndexNumber = (indexNumbers+1)%5-1;
       if(colmnIndexNumber == -1){
         colmnIndexNumber = 4;
       }
@@ -90,12 +81,9 @@ function bingoCard(){
         }
         bingo4.splice(number2 ,1);
       } 
-      tr.classList.add(`click${btncl}`);
-      // ↑ビンゴを更新するときにtrが倍に増えてしまうためいつ作られたか確認する
       tbody.appendChild(tr);
     }
     bingoNumberBoard.appendChild(tbody);
-    // console.log(bingo3);
   }
 
     bingoCard();
@@ -106,10 +94,8 @@ function returnBtn(){
   // 上記は解決
   // 再度ビンゴカードを作成すると以前のデータも作られてしまうのを改善する
   resetNumber();
-  btncl= btncl +1;
   toggleChilds();
   bingoCard();
-  const prevBingo = document.getElementsByClassName(`click${btncl}`);
 }
 
 function toggleChilds(){
@@ -118,19 +104,21 @@ function toggleChilds(){
 }
 
 function resetNumber(){
-  bingo = [];
-  bingo2 = [];
+  br();
   bingo3 = [];
-  lineUp = [];
-  om =0;
-  counter = 75
+  counter = 75;
   score =0;
-  rowIndexNumber = 0;
-  colmnIndexNumber =0;
-  bccl = "";
   nl.textContent = "ok?"
   bingoNumberBoard.removeChild(tbody);
   tbody = document.createElement("tbody");
   // htmlにtbodyを追加してremoveChildした後にtbodyを新しく代入したらうまくいった
-  // 8/15 デバッグを行い演出を考える
 }
+
+function br(){
+  bingo = []
+  for(let i = 1;i <= 75;i++
+    ){
+    bingo.push(i);
+  }
+   array = bingo;
+} 
