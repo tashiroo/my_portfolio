@@ -4,7 +4,7 @@ let bingo = [];
 let bingo2 = [];
 let bingo3 = [];
 let array = [];
-let counter = 75;
+let counter = 30;
 let score = 0;
 let tbody = document.querySelector("tbody");
 const bingoNumberBoard = document.getElementById("bingoNumberBoard");
@@ -47,12 +47,12 @@ function btnClick(){
       for(let howBingo of lineUps){
         if(howBingo.join("") == "●●●●●"){
           score =score + 1;
-          if(score > 0){
-            counter = 0;
-            toggleChilds();
-          }
         }
       }
+    }
+    if(score > 0 || counter == 0){
+      counter = 0;
+      toggleChilds();
     }
   }
 }
