@@ -4,10 +4,13 @@ let bingo = [];
 let bingo2 = [];
 let bingo3 = [];
 let array = [];
-let counter = 75;
+let counter = 50;
 let score = 0;
+let reachPoint = 0;
+let message = "";
 let tbody = document.querySelector("tbody");
 const bingoNumberBoard = document.getElementById("bingoNumberBoard");
+const message_space = document.getElementById("message_space");
 const nl = document.getElementById("nl");
 const btn = document.getElementById("btn");
 const lotteryBtn = document.getElementById("lotteryBtn");
@@ -44,16 +47,30 @@ function btnClick(){
       const lineUpCloss1 = [bingo3[0],bingo3[6],bingo3[12],bingo3[18],bingo3[24]];
       const lineUpCloss2 = [bingo3[20],bingo3[16],bingo3[12],bingo3[8],bingo3[4]];
       const lineUps = [lineUpR,lineUpC,lineUpCloss1,lineUpCloss2];
+      
       for(let howBingo of lineUps){
-        if(howBingo.join("") == "●●●●●"){
+        let alignBingo = howBingo.filter(number=>number === "●");
+        if(alignBingo.length === 5){
           score =score + 1;
+        }else if(alignBingo.length === 4){
+          reachPoint += 1;
         }
       }
     }
-    if(score > 0 || counter == 0){
+    // 上のif文にmessage=""を入れるとうまく変換されなかったので下のコードを追加して動作させる
+    if(score > 0){
+      message = "BINGO";
       counter = 0;
       toggleChilds();
+    }else if(reachPoint > 0){
+      message = "Reach";
+    }else if(counter === 0){
+      message = "Try again";
+      toggleChilds();
+    }else{
+      message = "Roll";
     }
+    message_space.textContent = message;
   }
 }
 
