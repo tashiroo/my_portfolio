@@ -1,6 +1,8 @@
 section{
+  text-align: center;
   margin: 50px auto 0;
 }
+
 
 table{
   margin:0 auto;
@@ -72,10 +74,6 @@ tr{
 
  #lotteryBtn.hide{
   display: none;
-}
-
-#clearBingo{
-  text-align: center;
 }
 
 #clearBingo.hide{

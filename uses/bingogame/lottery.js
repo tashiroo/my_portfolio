@@ -4,7 +4,7 @@ let bingo = [];
 let bingo2 = [];
 let bingo3 = [];
 let array = [];
-let counter = 30;
+let counter = 75;
 let score = 0;
 let tbody = document.querySelector("tbody");
 const bingoNumberBoard = document.getElementById("bingoNumberBoard");
@@ -122,3 +122,11 @@ function br(){
   }
    array = bingo;
 } 
+
+// リーチやビンゴの時にid message_spaceの文字の書き換えとアニメーションを作る
+
+// リーチとビンゴの時を感知するコード
+
+// 文字を変更するコード
+
+// アニメーションをつけるコードとcssの追加など

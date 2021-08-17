@@ -11,3 +11,7 @@
 //    ctx.closePath();
 // }
 // drow();
+
+let array5 = ["●","●","●","●",46];
+let s = array5.filter(number=>number === "●");
+console.log(s.length);
