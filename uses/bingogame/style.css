@@ -79,3 +79,35 @@ tr{
 #clearBingo.hide{
   display: none;
 }
+
+#message_space{
+  height: 70px;
+  font-size:60px;
+}
+
+.Roll{
+  color: darkgreen;
+  animation: RollAnimation infinite 3s;
+}
+
+.Reach{
+  color: aquamarine;
+  animation: ReachAnimation infinite 4s;
+}
+
+.BINGO{
+  animation: BINGOAnimation infinite 4s;
+  color: chartreuse;
+}
+
+@keyframes RollAnimation{
+  45%{transform: rotateX(40deg);}
+  90%{transform: rotateY(40deg);}
+}
+@keyframes ReachAnimation{
+  50%{font-size: 50px;color: aqua; }
+}
+
+@keyframes BINGOAnimation{
+  50%{color:orangered;transform: rotateX(20deg);}
+}

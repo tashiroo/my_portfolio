@@ -4,10 +4,10 @@ let bingo = [];
 let bingo2 = [];
 let bingo3 = [];
 let array = [];
-let counter = 50;
+let counter = 70;
 let score = 0;
 let reachPoint = 0;
-let message = "";
+let message = "message";
 let tbody = document.querySelector("tbody");
 const bingoNumberBoard = document.getElementById("bingoNumberBoard");
 const message_space = document.getElementById("message_space");
@@ -58,6 +58,7 @@ function btnClick(){
       }
     }
     // 上のif文にmessage=""を入れるとうまく変換されなかったので下のコードを追加して動作させる
+    message_space.classList.remove(`${message}`);
     if(score > 0){
       message = "BINGO";
       counter = 0;
@@ -65,11 +66,12 @@ function btnClick(){
     }else if(reachPoint > 0){
       message = "Reach";
     }else if(counter === 0){
-      message = "Try again";
+      message = "Try_again";
       toggleChilds();
     }else{
       message = "Roll";
     }
+    message_space.classList.add(`${message}`);
     message_space.textContent = message;
   }
 }
