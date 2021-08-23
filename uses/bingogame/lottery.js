@@ -4,7 +4,8 @@ let bingo = [];
 let bingo2 = [];
 let bingo3 = [];
 let array = [];
-let counter = 70;
+let counter = 50;
+// 何回か試してだいたい40~50くらいがちょうどよさそう
 let score = 0;
 let reachPoint = 0;
 let message = "message";
@@ -109,8 +110,7 @@ function bingoCard(){
 // 8/04 仕上げとしてscoreを実施
 
 function returnBtn(){
-  // 消えるけど個の子要素は親要素に存在しませんというエラーが出る
-  // 上記は解決
+  // 消えるけど個の子要素は親要素に存在しませんというエラーが出ることを改善した
   // 再度ビンゴカードを作成すると以前のデータも作られてしまうのを改善する
   resetNumber();
   toggleChilds();
@@ -141,11 +141,3 @@ function br(){
   }
    array = bingo;
 } 
-
-// リーチやビンゴの時にid message_spaceの文字の書き換えとアニメーションを作る
-
-// リーチとビンゴの時を感知するコード
-
-// 文字を変更するコード
-
-// アニメーションをつけるコードとcssの追加など
