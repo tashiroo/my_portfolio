@@ -134,10 +134,7 @@ function resetNumber(){
 }
 
 function br(){
-  bingo = []
-  for(let i = 1;i <= 75;i++
-    ){
-    bingo.push(i);
-  }
+  bingo = [...Array(76).keys()];
+  bingo.shift();
    array = bingo;
 } 
